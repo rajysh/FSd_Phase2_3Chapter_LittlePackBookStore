@@ -1,0 +1,36 @@
+﻿
+@model Book
+@{
+    ViewData["Title"] = "Test";
+    int x = 0;
+}
+
+@*<h1>Test</h1>
+@{
+    int x = 0;
+
+    <div><span>@Model.Title</span></div>
+    <div><span>@@Model.Title</span></div>
+   <div> <span>@Model.Description</span></div>
+   <div> <span>@DateTime.Now</span></div>
+   <div> <span>@ViewBag.BookName</span></div>
+   <div> <span>@x.ToString()</span></div>
+}*@
+
+@if (x < 0)
+{
+    <div><span>the value of x is less than zero.</span></div>
+}
+else if (x == 0)
+{
+    <div><span>the value of x is equal to zero.</span></div>
+}
+else
+{
+    <div><span>the value of x is greater than zero.</span></div>
+}
+
+@for(int i = 0; i < 3; i++)
+{
+     <div><span>i.ToString()</span></div>
+}
